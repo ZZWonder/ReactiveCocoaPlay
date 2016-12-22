@@ -13,6 +13,7 @@
 		A925E47C1E0A81BA00321621 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A925E47A1E0A81BA00321621 /* Main.storyboard */; };
 		A925E47E1E0A81BA00321621 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A925E47D1E0A81BA00321621 /* Assets.xcassets */; };
 		A925E4811E0A81BA00321621 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A925E47F1E0A81BA00321621 /* LaunchScreen.storyboard */; };
+		A9DE7A5C1E0BD1F900850086 /* MainTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A9DE7A5B1E0BD1F900850086 /* MainTVC.m */; };
 		C8F4B1C4F8739B82F47FAA60 /* Pods_ReactiveCocoaPlay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3887960E06F9C822B3D4ED55 /* Pods_ReactiveCocoaPlay.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,8 @@
 		A925E47D1E0A81BA00321621 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A925E4801E0A81BA00321621 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A925E4821E0A81BA00321621 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9DE7A5A1E0BD1F900850086 /* MainTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTVC.h; sourceTree = "<group>"; };
+		A9DE7A5B1E0BD1F900850086 /* MainTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTVC.m; sourceTree = "<group>"; };
 		B288BA5C62F4B42CCD5BC618 /* Pods-ReactiveCocoaPlay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveCocoaPlay.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveCocoaPlay/Pods-ReactiveCocoaPlay.release.xcconfig"; sourceTree = "<group>"; };
 		FE402BB4FFAA7F3BDFAFE39A /* Pods-ReactiveCocoaPlay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveCocoaPlay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveCocoaPlay/Pods-ReactiveCocoaPlay.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,6 +80,7 @@
 				A925E4751E0A81BA00321621 /* AppDelegate.m */,
 				A925E4771E0A81BA00321621 /* ViewController.h */,
 				A925E4781E0A81BA00321621 /* ViewController.m */,
+				A9DE7A591E0BD18600850086 /* Main */,
 				A925E47A1E0A81BA00321621 /* Main.storyboard */,
 				A925E47D1E0A81BA00321621 /* Assets.xcassets */,
 				A925E47F1E0A81BA00321621 /* LaunchScreen.storyboard */,
@@ -92,6 +96,15 @@
 				A925E4721E0A81BA00321621 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A9DE7A591E0BD18600850086 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				A9DE7A5A1E0BD1F900850086 /* MainTVC.h */,
+				A9DE7A5B1E0BD1F900850086 /* MainTVC.m */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		B1AF56DC503AB903658F68F4 /* Pods */ = {
@@ -227,6 +240,7 @@
 			files = (
 				A925E4791E0A81BA00321621 /* ViewController.m in Sources */,
 				A925E4761E0A81BA00321621 /* AppDelegate.m in Sources */,
+				A9DE7A5C1E0BD1F900850086 /* MainTVC.m in Sources */,
 				A925E4731E0A81BA00321621 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,10 +360,13 @@
 			baseConfigurationReference = FE402BB4FFAA7F3BDFAFE39A /* Pods-ReactiveCocoaPlay.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				INFOPLIST_FILE = ReactiveCocoaPlay/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rongteng.ReactiveCocoaPlay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Debug;
 		};
@@ -358,10 +375,13 @@
 			baseConfigurationReference = B288BA5C62F4B42CCD5BC618 /* Pods-ReactiveCocoaPlay.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				INFOPLIST_FILE = ReactiveCocoaPlay/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rongteng.ReactiveCocoaPlay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Release;
 		};
@@ -384,6 +404,7 @@
 				A925E4871E0A81BA00321621 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
