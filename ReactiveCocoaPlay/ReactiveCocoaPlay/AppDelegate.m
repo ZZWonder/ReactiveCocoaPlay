@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MainTVC.h"
-#import "ViewController.h"
+
 
 @interface AppDelegate ()
 
@@ -20,10 +20,17 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
     MainTVC *main = [[MainTVC alloc] init];
-    _window.rootViewController = main;
+    main.title = @"ReactiveCocoa";
+    UINavigationController *nv = [[UINavigationController alloc] initWithRootViewController:main];
+    _window.rootViewController = nv;
     [self.window makeKeyAndVisible];
     return YES;
+}
+
++ (void)load {
+    [super load];;
 }
 
 

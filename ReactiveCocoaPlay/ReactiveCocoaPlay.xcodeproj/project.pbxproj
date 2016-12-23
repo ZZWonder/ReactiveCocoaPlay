@@ -150,6 +150,7 @@
 				TargetAttributes = {
 					A925E46D1E0A81BA00321621 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = GDTNJJH4S7;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -361,6 +362,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				DEVELOPMENT_TEAM = GDTNJJH4S7;
 				INFOPLIST_FILE = ReactiveCocoaPlay/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -376,6 +378,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				DEVELOPMENT_TEAM = GDTNJJH4S7;
 				INFOPLIST_FILE = ReactiveCocoaPlay/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

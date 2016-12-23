@@ -15,8 +15,6 @@
 @property (weak, nonatomic) IBOutlet UISwitch *completSwitch;
 @property (nonatomic, strong) id leftSubscriber;
 @property (nonatomic, strong) id rightSubscriber;
-@property (nonatomic,strong) RACSignal *left;
-@property (nonatomic,strong) RACSignal *right;
 
 @end
 
@@ -24,23 +22,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.title = @"merge";
     [self reactiveCocoaMerge];
 }
 
 - (void)reactiveCocoaMerge {
     RACSignal *leftSignal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-        
         self.leftSubscriber = subscriber;
         return nil;
     }];
-    _left = leftSignal;
     
     RACSignal *rightSignal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         self.rightSubscriber = subscriber;
         return nil;
     }];
-    _right = rightSignal;
     
     [[RACSignal merge:@[leftSignal,rightSignal]] subscribeCompleted:^{
         [self.completSwitch setOn:YES animated:YES];
@@ -49,9 +44,6 @@
     
 }
 
-- (void)dismissSelf {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
 
 - (IBAction)leftSwitchChanged:(id)sender {
     [_leftSubscriber sendCompleted];
@@ -61,6 +53,9 @@
     [_rightSubscriber sendCompleted];
 }
 
+- (void)dismissSelf {
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 @end
 
