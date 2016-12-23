@@ -7,6 +7,7 @@
 //
 
 #import "MainTVC.h"
+#import "ViewController.h"
 
 @interface MainTVC ()
 
@@ -18,12 +19,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self tableData];
+    [self tableViewData];
 }
 
 - (void)tableViewData {
     self.tableData = @[@"merge"];
     self.tableView.tableFooterView = [UIView new];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cellId"];
 }
 
 #pragma mark - Table view data source
@@ -35,14 +37,24 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellId" forIndexPath:indexPath];
     
-    cell.detailTextLabel.text = self.tableData[indexPath.row];
-    cell.detailTextLabel.textColor = [UIColor redColor];
+    cell.textLabel.text = self.tableData[indexPath.row];
+    
+    cell.textLabel.textColor = [UIColor redColor];
     
     return cell;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 100;
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    ViewController *vc = [sb instantiateInitialViewController];
+//    [self.navigationController pushViewController:vc animated:YES];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 @end

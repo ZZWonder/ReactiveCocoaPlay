@@ -25,6 +25,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self reactiveCocoaMerge];
+}
+
+- (void)reactiveCocoaMerge {
     RACSignal *leftSignal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         
         self.leftSubscriber = subscriber;
@@ -40,18 +44,13 @@
     
     [[RACSignal merge:@[leftSignal,rightSignal]] subscribeCompleted:^{
         [self.completSwitch setOn:YES animated:YES];
+        [self performSelector:@selector(dismissSelf) withObject:nil afterDelay:1];
     }];
     
-    [_completSwitch addTarget:self action:@selector(midSwitchChanged:) forControlEvents:UIControlEventValueChanged];
-}
-- (IBAction)bottomSwitchChanged:(id)sender {
-    [[RACSignal merge:@[_left,_right]] subscribeCompleted:^{
-        self.completSwitch.on = !self.completSwitch.isOn;
-    }];
 }
 
-- (void)midSwitchChanged:(UISwitch *)sender {
-    
+- (void)dismissSelf {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)leftSwitchChanged:(id)sender {
