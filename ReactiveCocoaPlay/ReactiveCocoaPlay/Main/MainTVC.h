@@ -2,7 +2,7 @@
 //  MainTVC.h
 //  ReactiveCocoaPlay
 //
-//  Created by 王震 on 2016/12/22.
+//  Created by vint on 2016/12/22.
 //  Copyright © 2016年 vint. All rights reserved.
 //
 
