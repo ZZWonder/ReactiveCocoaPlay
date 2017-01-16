@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A9123C821E2CB86D002B2D81 /* UIImageView+wonder.m in Sources */ = {isa = PBXBuildFile; fileRef = A9123C811E2CB86D002B2D81 /* UIImageView+wonder.m */; };
+		A9123C851E2CB95B002B2D81 /* UIImage+wonder.m in Sources */ = {isa = PBXBuildFile; fileRef = A9123C841E2CB95B002B2D81 /* UIImage+wonder.m */; };
 		A925E4731E0A81BA00321621 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A925E4721E0A81BA00321621 /* main.m */; };
 		A925E4761E0A81BA00321621 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A925E4751E0A81BA00321621 /* AppDelegate.m */; };
 		A925E4791E0A81BA00321621 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A925E4781E0A81BA00321621 /* ViewController.m */; };
@@ -19,6 +21,10 @@
 
 /* Begin PBXFileReference section */
 		3887960E06F9C822B3D4ED55 /* Pods_ReactiveCocoaPlay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactiveCocoaPlay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9123C801E2CB86D002B2D81 /* UIImageView+wonder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+wonder.h"; sourceTree = "<group>"; };
+		A9123C811E2CB86D002B2D81 /* UIImageView+wonder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+wonder.m"; sourceTree = "<group>"; };
+		A9123C831E2CB95B002B2D81 /* UIImage+wonder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+wonder.h"; sourceTree = "<group>"; };
+		A9123C841E2CB95B002B2D81 /* UIImage+wonder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+wonder.m"; sourceTree = "<group>"; };
 		A925E46E1E0A81BA00321621 /* ReactiveCocoaPlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveCocoaPlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A925E4721E0A81BA00321621 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A925E4741E0A81BA00321621 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -55,6 +61,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A9123C7D1E2CB761002B2D81 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				A9123C7E1E2CB77F002B2D81 /* Extension */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		A9123C7E1E2CB77F002B2D81 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A9123C801E2CB86D002B2D81 /* UIImageView+wonder.h */,
+				A9123C811E2CB86D002B2D81 /* UIImageView+wonder.m */,
+				A9123C831E2CB95B002B2D81 /* UIImage+wonder.h */,
+				A9123C841E2CB95B002B2D81 /* UIImage+wonder.m */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		A925E4651E0A81BA00321621 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +106,7 @@
 				A925E4771E0A81BA00321621 /* ViewController.h */,
 				A925E4781E0A81BA00321621 /* ViewController.m */,
 				A925E47A1E0A81BA00321621 /* Main.storyboard */,
+				A9123C7D1E2CB761002B2D81 /* Tools */,
 				A9DE7A591E0BD18600850086 /* Main */,
 				A925E47D1E0A81BA00321621 /* Assets.xcassets */,
 				A925E47F1E0A81BA00321621 /* LaunchScreen.storyboard */,
@@ -239,7 +265,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9123C851E2CB95B002B2D81 /* UIImage+wonder.m in Sources */,
 				A925E4791E0A81BA00321621 /* ViewController.m in Sources */,
+				A9123C821E2CB86D002B2D81 /* UIImageView+wonder.m in Sources */,
 				A925E4761E0A81BA00321621 /* AppDelegate.m in Sources */,
 				A9DE7A5C1E0BD1F900850086 /* MainTVC.m in Sources */,
 				A925E4731E0A81BA00321621 /* main.m in Sources */,

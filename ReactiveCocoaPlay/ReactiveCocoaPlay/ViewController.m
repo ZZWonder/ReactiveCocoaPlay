@@ -41,7 +41,6 @@
         [self.completSwitch setOn:YES animated:YES];
         [self performSelector:@selector(dismissSelf) withObject:nil afterDelay:1];
     }];
-    
 }
 
 
