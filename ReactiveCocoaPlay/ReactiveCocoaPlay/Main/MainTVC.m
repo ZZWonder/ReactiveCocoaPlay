@@ -13,6 +13,7 @@
 @interface MainTVC ()
 
 @property (nonatomic, copy) NSArray *tableData;
+@property (nonatomic, copy) NSArray *tableDetailTextData;
 
 @end
 
@@ -25,8 +26,10 @@
 }
 
 - (void)tableViewData {
-    self.tableData = @[@"merge"];
+    self.tableData = @[@"merge", @"subject"];
+    self.tableDetailTextData = @[@"", @"ZZSubjectVC"];
     self.tableView.tableFooterView = [UIView new];
+    
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cellId"];
     [self.tableView setContentInset:UIEdgeInsetsMake(-(CGRectGetMaxY(self.navigationController.navigationBar.frame)), 0, 0, 0)];
 }
@@ -42,8 +45,11 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellId" forIndexPath:indexPath];
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellId" forIndexPath:indexPath];
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:@"cellId"];
     cell.textLabel.text = self.tableData[indexPath.row];
+    cell.textLabel.textAlignment = NSTextAlignmentLeft;
+    cell.detailTextLabel.text = self.tableDetailTextData[indexPath.row];
     cell.textLabel.textColor = [UIColor redColor];
     return cell;
 }
@@ -54,8 +60,15 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
-    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    ViewController *vc = [sb instantiateInitialViewController];
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    ViewController *vc;
+    if (indexPath.row == 0) {
+        UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        vc = [sb instantiateInitialViewController];        
+    } else {
+        Class vv = NSClassFromString(cell.detailTextLabel.text);
+        vc = [[vv alloc] init];
+    }
     [self.navigationController pushViewController:vc animated:YES];
 }
 

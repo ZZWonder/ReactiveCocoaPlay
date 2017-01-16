@@ -17,6 +17,8 @@
 		A925E4811E0A81BA00321621 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A925E47F1E0A81BA00321621 /* LaunchScreen.storyboard */; };
 		A9DE7A5C1E0BD1F900850086 /* MainTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A9DE7A5B1E0BD1F900850086 /* MainTVC.m */; };
 		C8F4B1C4F8739B82F47FAA60 /* Pods_ReactiveCocoaPlay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3887960E06F9C822B3D4ED55 /* Pods_ReactiveCocoaPlay.framework */; };
+		D762DC8B1E2D109A00E2D9B6 /* ZZSubjectVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D762DC8A1E2D109A00E2D9B6 /* ZZSubjectVC.m */; };
+		D762DC8E1E2D1A5500E2D9B6 /* ZZSubjectNextVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D762DC8D1E2D1A5500E2D9B6 /* ZZSubjectNextVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,12 @@
 		A9DE7A5A1E0BD1F900850086 /* MainTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTVC.h; sourceTree = "<group>"; };
 		A9DE7A5B1E0BD1F900850086 /* MainTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTVC.m; sourceTree = "<group>"; };
 		B288BA5C62F4B42CCD5BC618 /* Pods-ReactiveCocoaPlay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveCocoaPlay.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveCocoaPlay/Pods-ReactiveCocoaPlay.release.xcconfig"; sourceTree = "<group>"; };
+		D762DC891E2D109A00E2D9B6 /* ZZSubjectVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZSubjectVC.h; sourceTree = "<group>"; };
+		D762DC8A1E2D109A00E2D9B6 /* ZZSubjectVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZSubjectVC.m; sourceTree = "<group>"; };
+		D762DC8C1E2D1A5500E2D9B6 /* ZZSubjectNextVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZSubjectNextVC.h; sourceTree = "<group>"; };
+		D762DC8D1E2D1A5500E2D9B6 /* ZZSubjectNextVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZSubjectNextVC.m; sourceTree = "<group>"; };
+		D762DC8F1E2D1D3100E2D9B6 /* ZZWonder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZWonder.h; sourceTree = "<group>"; };
+		D762DC901E2D1D7600E2D9B6 /* ZZWonder-PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZZWonder-PrefixHeader.pch"; sourceTree = "<group>"; };
 		FE402BB4FFAA7F3BDFAFE39A /* Pods-ReactiveCocoaPlay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveCocoaPlay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveCocoaPlay/Pods-ReactiveCocoaPlay.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,9 +114,12 @@
 				A925E4771E0A81BA00321621 /* ViewController.h */,
 				A925E4781E0A81BA00321621 /* ViewController.m */,
 				A925E47A1E0A81BA00321621 /* Main.storyboard */,
+				D762DC871E2D0FE700E2D9B6 /* MainContact */,
 				A9123C7D1E2CB761002B2D81 /* Tools */,
 				A9DE7A591E0BD18600850086 /* Main */,
 				A925E47D1E0A81BA00321621 /* Assets.xcassets */,
+				D762DC8F1E2D1D3100E2D9B6 /* ZZWonder.h */,
+				D762DC901E2D1D7600E2D9B6 /* ZZWonder-PrefixHeader.pch */,
 				A925E47F1E0A81BA00321621 /* LaunchScreen.storyboard */,
 				A925E4821E0A81BA00321621 /* Info.plist */,
 				A925E4711E0A81BA00321621 /* Supporting Files */,
@@ -140,6 +151,25 @@
 				B288BA5C62F4B42CCD5BC618 /* Pods-ReactiveCocoaPlay.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		D762DC871E2D0FE700E2D9B6 /* MainContact */ = {
+			isa = PBXGroup;
+			children = (
+				D762DC881E2D102200E2D9B6 /* ViewControllers */,
+			);
+			path = MainContact;
+			sourceTree = "<group>";
+		};
+		D762DC881E2D102200E2D9B6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D762DC891E2D109A00E2D9B6 /* ZZSubjectVC.h */,
+				D762DC8A1E2D109A00E2D9B6 /* ZZSubjectVC.m */,
+				D762DC8C1E2D1A5500E2D9B6 /* ZZSubjectNextVC.h */,
+				D762DC8D1E2D1A5500E2D9B6 /* ZZSubjectNextVC.m */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,7 +295,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D762DC8E1E2D1A5500E2D9B6 /* ZZSubjectNextVC.m in Sources */,
 				A9123C851E2CB95B002B2D81 /* UIImage+wonder.m in Sources */,
+				D762DC8B1E2D109A00E2D9B6 /* ZZSubjectVC.m in Sources */,
 				A925E4791E0A81BA00321621 /* ViewController.m in Sources */,
 				A9123C821E2CB86D002B2D81 /* UIImageView+wonder.m in Sources */,
 				A925E4761E0A81BA00321621 /* AppDelegate.m in Sources */,
@@ -391,6 +423,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				DEVELOPMENT_TEAM = GDTNJJH4S7;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ReactiveCocoaPlay/ZZWonder-PrefixHeader.pch";
 				INFOPLIST_FILE = ReactiveCocoaPlay/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -407,6 +442,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				DEVELOPMENT_TEAM = GDTNJJH4S7;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ReactiveCocoaPlay/ZZWonder-PrefixHeader.pch";
 				INFOPLIST_FILE = ReactiveCocoaPlay/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
